@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="mt-20">
+    <section class="relative h-[300px] md:h-[400px] lg:h-[500px]">
+        <img src="https://images.pexels.com/photos/668353/pexels-photo-668353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Healthcare professionals collaborating" class="object-cover w-full h-full brightness-50" />
+        <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
+          About HealthTech
+        </h1>
+      
+    </section>
+  
+    <section class="py-16 md:py-24 bg-gray-100">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-lg text-gray-600 mb-6">
+            HealthTech is at the forefront of revolutionizing mental health care through advanced AI technology. Our team of dedicated professionals combines expertise in healthcare, artificial intelligence, and data science to create innovative solutions for early depression detection and personalized treatment plans.
+          </p>
+          <p class="text-lg text-gray-600">
+            Founded in 2023, we've quickly grown to become a leader in AI-driven mental health solutions, partnering with healthcare providers and institutions worldwide to improve patient outcomes and transform the landscape of mental health care.
+          </p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-16 md:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">What We Do</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 flex flex-col items-center text-center bg-white shadow-lg rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0 0l3-3m-3 3l-3-3m6-7.253a4 4 0 11-6 0M16 9a4 4 0 01-8 0M12 3a9 9 0 0111.928 4.073 9.093 9.093 0 010 9.854 9 9 0 01-16.72 0 9.093 9.093 0 010-9.854A9 9 0 0112 3z"/>
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">AI-Powered Depression Detection</h3>
+            <p class="text-gray-600">Our advanced algorithms analyze various data points to identify early signs of depression, enabling timely intervention and support.</p>
+          </div>
+          <div class="p-6 flex flex-col items-center text-center bg-white shadow-lg rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16h16V4H4zm2 8h12M6 6h12M6 18h12" />
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">Personalized Treatment Plans</h3>
+            <p class="text-gray-600">We create tailored treatment strategies based on individual patient data and AI insights, optimizing care for each person's unique needs.</p>
+          </div>
+          <div class="p-6 flex flex-col items-center text-center bg-white shadow-lg rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 00-4-4H4a4 4 0 00-4 4v2M16 7a4 4 0 00-4-4H9a4 4 0 00-4 4v3M17 16l3-3m0 0l3 3m-3-3v10" />
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">Continuous Monitoring and Support</h3>
+            <p class="text-gray-600">Our platform provides ongoing tracking of patient progress and mood fluctuations, ensuring timely adjustments to treatment plans.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-16 md:py-24 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Mission</h2>
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-xl mb-6">
+            At HealthTech, our mission is to transform mental health care through innovative AI technology, making early detection and personalized treatment accessible to all. We strive to:
+          </p>
+          <ul class="text-lg space-y-4 mb-8">
+            <li>Empower individuals to take control of their mental health</li>
+            <li>Support healthcare providers with cutting-edge tools and insights</li>
+            <li>Reduce the global burden of depression through early intervention</li>
+            <li>Advance the field of mental health research with data-driven approaches</li>
+          </ul>
+          <button class="bg-white text-blue-600 py-2 px-6 rounded-lg">Join Our Mission</button>
+        </div>
+      </div>
+    </section>
+</div>
+  
+
+{% endblock %}

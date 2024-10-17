@@ -1,0 +1,47 @@
+<header class="border-b">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <!-- Replace with an appropriate logo or icon -->
+                <svg class="h-8 w-8 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                </svg>
+                <span class="ml-2 text-2xl font-bold text-primary">HealthTech</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4 py-1 items-center">
+                    <li><a href="{% url 'home' %}" class="text-muted-foreground font-semibold hover:underline">Home</a></li>
+                    <li><a href="#" class="text-muted-foreground font-semibold hover:underline">Assessment</a></li>
+                    <li><a href="{% url 'about' %}" class="text-muted-foreground font-semibold hover:underline">About</a></li>
+                    <li>
+                        
+                        <a href="#" class="text-muted-foreground font-semibold hover:underline">
+                            <button class="bg-green-600 text-white font-semibold py-1 px-4 rounded-lg shadow-md hover:bg-green-700 transition duration-200">
+                                Sign In
+                            </button>
+                        </a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <!-- Mobile menu button -->
+                <button class="text-muted-foreground hover:text-primary p-2 rounded focus:outline-none">
+                    <!-- Mobile menu icon (Menu SVG) -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (hidden on larger screens) -->
+    <div class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#" class="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary">Home</a>
+            <a href="#" class="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary">Services</a>
+            <a href="#" class="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary">About</a>
+            <a href="#" class="block px-3 py-2 text-base font-medium text-muted-foreground hover:text-primary">Contact</a>
+        </div>
+    </div>
+    <hr class="border-t-2 text-black">
+</header>

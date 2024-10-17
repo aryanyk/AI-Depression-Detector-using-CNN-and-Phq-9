@@ -1,6 +1,73 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Welcome to the home page!</p>
+
+<main>
+    <section class="py-12 md:py-24 lg:py-32 xl:py-48">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-4xl font-bold tracking-tight text-primary sm:text-5xl md:text-6xl">
+              Advanced Depression Detection
+            </h1>
+            <p class="mt-4 text-xl text-muted-foreground">
+              Empowering mental health care with AI-driven technology for early detection and personalized treatment of depression.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <button class="bg-green-500 font-semibold text-black  px-4 py-2 b-1 rounded-lg">Get Started</button>
+              <button class="border border-primary text-black b-2 px-4 py-2 rounded-lg">Learn More</button>
+            </div>
+          </div>
+          <!-- Lottie Animation Section -->
+          <div class="w-full h-64 md:h-96">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_5njp3vgg.json" 
+              background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay>
+            </lottie-player>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-12 bg-muted">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose HealthTech?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 flex flex-col items-center text-center rounded-lg shadow-md">
+            <svg fill="#000000" class="h-12 w-12" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>shield-check-line</title> <path d="M31.25,7.4a43.79,43.79,0,0,1-6.62-2.35,45,45,0,0,1-6.08-3.21L18,1.5l-.54.35a45,45,0,0,1-6.08,3.21A43.79,43.79,0,0,1,4.75,7.4L4,7.59v8.34c0,13.39,13.53,18.4,13.66,18.45l.34.12.34-.12c.14,0,13.66-5.05,13.66-18.45V7.59ZM30,15.93c0,11-10,15.61-12,16.43-2-.82-12-5.44-12-16.43V9.14a47.54,47.54,0,0,0,6.18-2.25,48.23,48.23,0,0,0,5.82-3,48.23,48.23,0,0,0,5.82,3A47.54,47.54,0,0,0,30,9.14Z" class="clr-i-outline clr-i-outline-path-1"></path><path d="M10.88,16.87a1,1,0,0,0-1.41,1.41l6,6L26.4,13.77A1,1,0,0,0,25,12.33l-9.47,9.19Z" class="clr-i-outline clr-i-outline-path-2"></path> <rect x="0" y="0" width="36" height="36" fill-opacity="0"></rect> </g></svg>
+            <h3 class="text-xl font-semibold mb-2">Early Detection</h3>
+            <p class="text-muted-foreground">Our AI-powered system identifies early signs of depression for timely intervention.</p>
+          </div>
+          <div class="bg-white p-6 flex flex-col items-center text-center rounded-lg shadow-md">
+            <svg fill="#000000" class="h-12 w-12" viewBox="-2.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.56 10.11v2.046a3.827 3.827 0 1 1-7.655 0v-.45A3.61 3.61 0 0 1 .851 8.141V5.25a1.682 1.682 0 0 1 .763-1.408 1.207 1.207 0 1 1 .48 1.04.571.571 0 0 0-.135.368v2.89a2.5 2.5 0 0 0 5 0V5.25a.57.57 0 0 0-.108-.334 1.208 1.208 0 1 1 .533-1.018 1.681 1.681 0 0 1 .683 1.352v2.89a3.61 3.61 0 0 1-3.054 3.565v.45a2.719 2.719 0 0 0 5.438 0V10.11a2.144 2.144 0 1 1 1.108 0zm.48-2.07a1.035 1.035 0 1 0-1.035 1.035 1.037 1.037 0 0 0 1.036-1.035z"></path></g></svg>
+            <h3 class="text-xl font-semibold mb-2">Personalized Care</h3>
+            <p class="text-muted-foreground">Tailored treatment plans based on individual patient data and AI insights.</p>
+          </div>
+          <div class="bg-white p-6 flex flex-col items-center text-center rounded-lg shadow-md">
+            <svg viewBox="0 0 24 24" class="h-12 w-12" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <h3 class="text-xl font-semibold mb-2">Continuous Monitoring</h3>
+            <p class="text-muted-foreground">Real-time tracking of patient progress and mood fluctuations for optimal care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-12 bg-green-500">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-3xl font-bold text-primary-foreground mb-4">Subscribe to Our Newsletter</h2>
+          <p class="text-xl text-primary-foreground/80 mb-6">Stay updated with the latest in mental health technology and research.</p>
+          <form class="flex w-full max-w-md gap-2">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="flex-grow bg-primary-foreground text-primary px-4 py-2 rounded-lg"
+            />
+            <button type="submit" class="bg-white text-primary px-4 py-2 rounded-lg">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+
 {% endblock %}

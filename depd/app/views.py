@@ -10,6 +10,8 @@ def home(request):
 def about(request):
     return render(request, "app/about.html")
 
+
+
 def phq9_view(request):
     if request.method == 'POST':
         form = PHQ9Form(request.POST)
