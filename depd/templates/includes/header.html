@@ -11,15 +11,28 @@
             <nav class="hidden md:block">
                 <ul class="flex space-x-4 py-1 items-center">
                     <li><a href="{% url 'home' %}" class="text-muted-foreground font-semibold hover:underline">Home</a></li>
-                    <li><a href="#" class="text-muted-foreground font-semibold hover:underline">Assessment</a></li>
+                    <li><a href="{% url 'dashboard' %}" class="text-muted-foreground font-semibold hover:underline">Assessment</a></li>
                     <li><a href="{% url 'about' %}" class="text-muted-foreground font-semibold hover:underline">About</a></li>
                     <li>
                         
-                        <a href="#" class="text-muted-foreground font-semibold hover:underline">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'account_logout' %}" class="text-muted-foreground font-semibold hover:underline">
+                                <button class="bg-red-600 text-white font-semibold py-1 px-4 rounded-lg shadow-md hover:bg-red-700 transition duration-200">
+                                    Sign Out
+                                </button>
+                            </a>
+                        {% else %}
+                            <a href="{% url 'account_login' %}" class="text-muted-foreground font-semibold hover:underline">
+                                <button class="bg-green-600 text-white font-semibold py-1 px-4 rounded-lg shadow-md hover:bg-green-700 transition duration-200">
+                                    Sign In
+                                </button>
+                            </a>
+                        {% endif %}
+                        <!-- <a href="{% url 'account_login' %}" class="text-muted-foreground font-semibold hover:underline">
                             <button class="bg-green-600 text-white font-semibold py-1 px-4 rounded-lg shadow-md hover:bg-green-700 transition duration-200">
                                 Sign In
                             </button>
-                        </a></li>
+                        </a></li> -->
                 </ul>
             </nav>
             <div class="md:hidden">

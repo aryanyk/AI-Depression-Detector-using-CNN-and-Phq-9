@@ -25,7 +25,11 @@ SECRET_KEY = "django-insecure-%m%$a#l7qy2uux9*d@j24n^sf_d12c)0(zfi6k%90@v3#fa3x+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+]
+
 
 
 # Application definition
@@ -37,9 +41,16 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
+
 
     'app',
+    'allauth',
+    'allauth.account',
+
 ]
+
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -49,9 +60,15 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "depd.urls"
+
+SITE_ID = 1
+
+
 
 TEMPLATES = [
     {
@@ -66,9 +83,17 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                
             ],
         },
     },
+]
+
+
+AUTHENTICATION_BACKENDS =[
+    
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 WSGI_APPLICATION = "depd.wsgi.application"
@@ -125,3 +150,16 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+LOGIN_REDIRECT_URL = '/'  # Redirect after login
+LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+ACCOUNT_SIGNUP_REDIRECT_URL = '/complete-profile/'  # Change this to your desired profile completion URL
+
+# Email settings
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+
+# adding host
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+

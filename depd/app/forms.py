@@ -18,3 +18,13 @@ class PHQ9Form(forms.Form):
     q7 = forms.ChoiceField(choices=PHQ_CHOICES, widget=forms.RadioSelect, label="Trouble concentrating on things?")
     q8 = forms.ChoiceField(choices=PHQ_CHOICES, widget=forms.RadioSelect, label="Moving or speaking so slowly that others could have noticed?")
     q9 = forms.ChoiceField(choices=PHQ_CHOICES, widget=forms.RadioSelect, label="Thoughts that you would be better off dead?")
+
+
+class ProfileForm(forms.Form):
+    name = forms.CharField(max_length=100, required=True)
+    age = forms.IntegerField(required=True)
+    dob = forms.DateField(required=True)
+    bmi = forms.FloatField(required=True)
+    height = forms.FloatField(required=True)
+    weight = forms.FloatField(required=True)
+    image = forms.ImageField(required=False)

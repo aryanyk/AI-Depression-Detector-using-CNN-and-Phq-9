@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from app.forms import PHQ9Form
+from app.forms import PHQ9Form, ProfileForm
+
 
 # Create your views here.
 
@@ -34,3 +35,20 @@ def phq9_view(request):
         form = PHQ9Form()
 
     return render(request, 'app/phq9_form.html', {'form': form})
+
+
+
+def dashboard(request):
+    return render(request, "app/dashboard.html",)
+
+# COMPLETE THE FUNCTION
+def complete_profile(request):
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            # Save the form data
+            form.save()
+            return render(request, "app/complete-profile.html",{ 'form': form})
+    else:
+        form = ProfileForm()
+    return render(request, "app/complete-profile.html",{ 'form': form})

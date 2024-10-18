@@ -13,6 +13,8 @@ urlpatterns = [
     path("", views.home, name="home"),
     path("about/", views.about, name="about"),
     path("assesment/", views.phq9_view, name="phq9"),
+    path("dashboard/", views.dashboard, name="dashboard"),
+    path("complete-profile/", views.complete_profile, name="complete-profile"),
     
 ]
 

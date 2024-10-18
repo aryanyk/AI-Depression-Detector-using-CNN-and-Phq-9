@@ -1,86 +1,83 @@
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
+import { CalendarDays, Droplet, Heart, HeartPulse, Scale, User } from "lucide-react"
 
- 
-     
 
-      <main>
-        <section className="relative h-[300px] md:h-[400px] lg:h-[500px]">
-          <Image
-            src="/placeholder.svg?height=500&width=1600"
-            alt="Healthcare professionals collaborating"
-            layout="fill"
-            objectFit="cover"
-            className="brightness-50"
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center">
-              About HealthTech
-            </h1>
-          </div>
-        </section>
 
-        <section className="py-16 md:py-24 bg-muted">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground mb-6">
-                HealthTech is at the forefront of revolutionizing mental health care through advanced AI technology. Our team of dedicated professionals combines expertise in healthcare, artificial intelligence, and data science to create innovative solutions for early depression detection and personalized treatment plans.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                Founded in 2023, we've quickly grown to become a leader in AI-driven mental health solutions, partnering with healthcare providers and institutions worldwide to improve patient outcomes and transform the landscape of mental health care.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">What We Do</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card>
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <Brain className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">AI-Powered Depression Detection</h3>
-                  <p className="text-muted-foreground">Our advanced algorithms analyze various data points to identify early signs of depression, enabling timely intervention and support.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <Heart className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Personalized Treatment Plans</h3>
-                  <p className="text-muted-foreground">We create tailored treatment strategies based on individual patient data and AI insights, optimizing care for each person's unique needs.</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <Target className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Continuous Monitoring and Support</h3>
-                  <p className="text-muted-foreground">Our platform provides ongoing tracking of patient progress and mood fluctuations, ensuring timely adjustments to treatment plans.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
 
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-8">Our Mission</h2>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xl mb-6">
-                At HealthTech, our mission is to transform mental health care through innovative AI technology, making early detection and personalized treatment accessible to all. We strive to:
-              </p>
-              <ul className="text-lg space-y-4 mb-8">
-                <li>Empower individuals to take control of their mental health</li>
-                <li>Support healthcare providers with cutting-edge tools and insights</li>
-                <li>Reduce the global burden of depression through early intervention</li>
-                <li>Advance the field of mental health research with data-driven approaches</li>
-              </ul>
-              <Button size="lg" variant="secondary">Join Our Mission</Button>
-            </div>
-          </div>
-        </section>
-      </main>
-
+  return (
+   
       
+
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="px-4 py-6 sm:px-0">
+          <Card className="mb-6">
+            <CardHeader>
+              <CardTitle>User Profile</CardTitle>
+            </CardHeader>
+            <CardContent className="flex flex-col md:flex-row items-center gap-6">
+              <Avatar className="w-24 h-24">
+                <AvatarImage src="/placeholder.svg?height=96&width=96" alt={user.name} />
+                <AvatarFallback><User className="w-12 h-12" /></AvatarFallback>
+              </Avatar>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="flex items-center gap-2">
+                  <User className="text-primary" />
+                  <span>{user.name}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Droplet className="text-red-500" />
+                  <span>Blood Group: {user.bloodGroup}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CalendarDays className="text-primary" />
+                  <span>Age: {user.age}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Scale className="text-primary" />
+                  <span>Weight: {user.weight}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <HeartPulse className="text-primary" />
+                  <span>Height: {user.height}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Heart className="text-primary" />
+                  <span>BMI: {user.bmi}</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="flex justify-center md:justify-end space-x-4">
+              <Button>Take Online Assessment</Button>
+              <Button variant="outline">How to Use</Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Previous Results</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {previousResults.map((result, index) => (
+                  <div key={index} className="flex items-center justify-between p-4 bg-white rounded-lg shadow">
+                    <div>
+                      <p className="font-semibold">{result.date}</p>
+                      <p>Score: {result.score}</p>
+                    </div>
+                    <Badge variant={result.depressed ? "destructive" : "default"}>
+                      {result.depressed ? "Depressed" : "Not Depressed"}
+                    </Badge>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
     </div>
   )
 }
