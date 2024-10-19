@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <h1 class="text-2xl font-semibold text-center">Complete Your Profile</h1>
+    <p class="text-gray-600 text-center mb-4">Complete your profile to get started with HealthTech</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <div class="mb-4">
+            <label for="first_name" class="block text-sm font-medium text-gray-700">First Name</label>
+            <input type="text" name="first_name" id="first_name" required
+                   class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+        </div>
+
+        <div class="mb-4">
+            <label for="last_name" class="block text-sm font-medium text-gray-700">Last Name</label>
+            <input type="text" name="last_name" id="last_name" required
+                   class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"> 
+        </div>
+
+        <div class="mb-4">
+            <label for="image" class="block text-sm font-medium text-gray-700">Profile Image</label>
+            <input type="file" name="image" id="image"
+                   class="mt-1 block w-full text-sm text-gray-500 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" required
+                   class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+        </div>
+
+        
+
+        <div class="mb-4">
+            <label for="date_of_birth" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+            <input type="date" name="date_of_birth" id="date_of_birth" required
+                   class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+        </div>
+
+        <div class="mb-4">
+            <label for="height" class="block text-sm font-medium text-gray-700">Height (cm)</label>
+            <input type="number" step=".01" name="height" id="height" required
+                   class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+        </div>
+
+        <div class="mb-4">
+            <label for="weight" class="block text-sm font-medium text-gray-700">Weight (kg)</label>
+            <input type="number" step=".01" name="weight" id="weight" required
+                   class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+        </div>
+
+        <div>
+            <button type="submit"
+                    class="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-md shadow">
+                Complete Profile
+            </button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

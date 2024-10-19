@@ -26,9 +26,9 @@ SECRET_KEY = "django-insecure-%m%$a#l7qy2uux9*d@j24n^sf_d12c)0(zfi6k%90@v3#fa3x+
 DEBUG = True
 
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-]
+
+
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -146,6 +146,9 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -158,8 +161,9 @@ ACCOUNT_SIGNUP_REDIRECT_URL = '/complete-profile/'  # Change this to your desire
 
 # Email settings
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+
 
 # adding host
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = "none"
 

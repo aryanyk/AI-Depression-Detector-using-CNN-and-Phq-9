@@ -15,6 +15,9 @@ urlpatterns = [
     path("assesment/", views.phq9_view, name="phq9"),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("complete-profile/", views.complete_profile, name="complete-profile"),
+    path("how-to-use/", views.howtouse, name="how-to-use"),
+    path('video_feed/', views.video_feed, name='video_feed'),
+    
     
 ]
 

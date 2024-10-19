@@ -12,28 +12,28 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-center gap-6 p-4">
                     <div class="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center">
-                        <img src="/placeholder.svg?height=96&width=96" alt="User Name" class="w-full h-full rounded-full" />
+                        <img src="{{profile.image.url}}" alt="User Name" class="w-full h-full rounded-full" />
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div class="flex items-center gap-2">
                             <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> <!-- Replace with User Icon -->
-                            <span>User Name</span>
+                            <span>{{profile.first_name}} </span> <span>{{profile.last_name}}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V13H15C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V15H9.00002C8.44773 15 8.00002 14.5523 8.00002 14C8.00002 13.4477 8.44773 13 9.00002 13H11V11Z" fill="#ff0000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5766 1.54273C11.3481 0.712021 12.6514 0.711988 13.4228 1.54267C14.3666 2.55889 16.1085 4.53043 17.6206 6.77875C19.1294 9.02208 20.5307 11.5774 20.5058 14.3527C20.5036 14.5982 20.4906 14.9427 20.4477 15.3536C20.3627 16.17 20.1573 17.2781 19.6661 18.4009C19.1727 19.5286 18.3809 20.6923 17.1178 21.5709C15.8489 22.4536 14.1739 23 11.9997 23C9.82555 23 8.15055 22.4536 6.88176 21.5709C5.61871 20.6923 4.82696 19.5285 4.33364 18.4008C3.84247 17.278 3.6372 16.17 3.5522 15.3536C3.50942 14.9426 3.49636 14.5981 3.49418 14.3526C3.46955 11.5773 4.87048 9.02222 6.37919 6.77881C7.89119 4.5305 9.6329 2.55896 10.5766 1.54273ZM11.9998 2.94942C11.0798 3.94302 9.44579 5.80274 8.0388 7.89491C6.76472 9.78944 5.47323 11.9806 5.49411 14.3349C5.49581 14.5269 5.50616 14.8074 5.54145 15.1465C5.61262 15.8301 5.78224 16.722 6.16599 17.5992C6.54757 18.4715 7.13074 19.3078 8.0239 19.9291C8.91132 20.5465 10.1738 21 11.9997 21C13.8256 21 15.0882 20.5465 15.9757 19.9291C16.8689 19.3078 17.4521 18.4715 17.8338 17.5992C18.2176 16.722 18.3873 15.83 18.4585 15.1464C18.4938 14.8074 18.5042 14.5268 18.5059 14.3348C18.5269 11.9805 17.2351 9.78932 15.961 7.89491C14.5539 5.80273 12.9198 3.94301 11.9998 2.94942Z" fill="#ff0000"></path> </g></svg> <!-- Replace with Blood Drop Icon -->
-                            <span>Blood Group: A+</span>
+                            <span>Blood Group: {{profile.Blood_Group}}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg fill="#000000" class="h-6 w-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19,4H17V3a1,1,0,0,0-2,0V4H9V3A1,1,0,0,0,7,3V4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm1,15a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V12H20Zm0-9H4V7A1,1,0,0,1,5,6H7V7A1,1,0,0,0,9,7V6h6V7a1,1,0,0,0,2,0V6h2a1,1,0,0,1,1,1Z"></path></g></svg> <!-- Replace with Calendar Icon -->
-                            <span>Age: 30</span>
+                            <span>Age: {{profile.age}}</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.0002 6L11.0064 9M16.5 6C17.8978 6 18.5967 6 19.1481 6.22836C19.8831 6.53284 20.4672 7.11687 20.7716 7.85195C21 8.40326 21 9.10218 21 10.5V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V10.5C3 9.10218 3 8.40326 3.22836 7.85195C3.53284 7.11687 4.11687 6.53284 4.85195 6.22836C5.40326 6 6.10218 6 7.5 6M10 17H14M10.5415 3H13.4588C14.5397 3 15.0802 3 15.4802 3.18541C16.0136 3.43262 16.4112 3.90199 16.5674 4.46878C16.6845 4.89387 16.5957 5.42698 16.418 6.4932C16.2862 7.28376 16.2203 7.67904 16.0449 7.98778C15.8111 8.39944 15.4388 8.71481 14.9943 8.87778C14.661 9 14.2602 9 13.4588 9H10.5415C9.74006 9 9.33933 9 9.00596 8.87778C8.56146 8.71481 8.18918 8.39944 7.95536 7.98778C7.77999 7.67904 7.71411 7.28376 7.58235 6.4932C7.40465 5.42698 7.3158 4.89387 7.43291 4.46878C7.58906 3.90199 7.98669 3.43262 8.52009 3.18541C8.92014 3 9.46061 3 10.5415 3Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> <!-- Replace with Scale Icon -->
-                            <span>Weight: 70kg</span>
+                            <span>Weight: {{profile.weight}}kg</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg fill="#000000" viewBox="0 0 24 24" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6,4.70710678 L3.85355339,6.85355339 C3.65829124,7.04881554 3.34170876,7.04881554 3.14644661,6.85355339 C2.95118446,6.65829124 2.95118446,6.34170876 3.14644661,6.14644661 L6.14644661,3.14644661 C6.34170876,2.95118446 6.65829124,2.95118446 6.85355339,3.14644661 L9.85355339,6.14644661 C10.0488155,6.34170876 10.0488155,6.65829124 9.85355339,6.85355339 C9.65829124,7.04881554 9.34170876,7.04881554 9.14644661,6.85355339 L7,4.70710678 L7,19.2928932 L9.14644661,17.1464466 C9.34170876,16.9511845 9.65829124,16.9511845 9.85355339,17.1464466 C10.0488155,17.3417088 10.0488155,17.6582912 9.85355339,17.8535534 L6.85355339,20.8535534 C6.65829124,21.0488155 6.34170876,21.0488155 6.14644661,20.8535534 L3.14644661,17.8535534 C2.95118446,17.6582912 2.95118446,17.3417088 3.14644661,17.1464466 C3.34170876,16.9511845 3.65829124,16.9511845 3.85355339,17.1464466 L6,19.2928932 L6,4.70710678 Z M18.5,3 C19.8807119,3 21,4.11928813 21,5.5 L21,18.5 C21,19.8807119 19.8807119,21 18.5,21 L15.5,21 C14.1192881,21 13,19.8807119 13,18.5 L13,5.5 C13,4.11928813 14.1192881,3 15.5,3 L18.5,3 Z M18.5,4 L15.5,4 C14.6715729,4 14,4.67157288 14,5.5 L14,18.5 C14,19.3284271 14.6715729,20 15.5,20 L18.5,20 C19.3284271,20 20,19.3284271 20,18.5 L20,5.5 C20,4.67157288 19.3284271,4 18.5,4 Z"></path> </g></svg> <!-- Replace with Height Icon -->
-                            <span>Height: 175cm</span>
+                            <span>Height: {{profile.height}}cm</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <svg fill="#000000" viewBox="0 -8 72 72" class="h-6 w-6" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>heartbeat</title><path d="M49.13,29.37l-1.33-1-1.94-7.25-2,7.25-1.33,1H37.65l-3,11.17H32L26.77,21.11l-1.95,7.25-1.33,1H14.21C20,41.86,36,50,36,50s16-8.09,21.79-20.58Z"></path><path d="M22.44,26.63l3-11.17H28.1l5.22,19.43,2-7.25,1.33-1h4.92l3-11.17h2.65l3,11.17h8.68a20.18,20.18,0,0,0,1-6.17c0-8-6.17-14.41-13.78-14.41A13.46,13.46,0,0,0,36,10.66,13.44,13.44,0,0,0,25.91,6.05c-7.61,0-13.78,6.45-13.78,14.41a20.18,20.18,0,0,0,1,6.17Z"></path></g></svg> <!-- Replace with Heart Icon -->
@@ -44,8 +44,10 @@
                 <div class="flex justify-center md:justify-end space-x-4 p-4 border-t">
                     <a href="{% url 'phq9' %}">
                     <button class="bg-green-500 text-white px-4 py-2 rounded">Take Online Assessment</button>
-                    </a>
+                    </a >
+                    <a href="{% url 'how-to-use' %}">
                     <button class="border border-green-500 text-green-700 bg-white hover:bg-green-100 px-4 py-2 rounded">How to Use</button>
+                </a>
                 </div>
             </div>
     

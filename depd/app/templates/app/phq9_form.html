@@ -1,20 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
         <h1 class="text-2xl font-bold mb-6 text-center">PHQ-9 Depression Assessment</h1>
 
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
+        <div class="mb-6">
+            <h2 class="text-lg font-semibold text-center">Facial Emotion Detection</h2>
+            <img id="video" src="{% url 'video_feed' %}" class="rounded-lg shadow-lg w-full h-64 object-cover" alt="Video Feed">
+        </div>
 
-            <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 mt-4 rounded hover:bg-blue-600">
+        <form method="POST" class="space-y-6">
+            {% csrf_token %}
+            <!-- Display each question with spacing -->
+            <div class="space-y-4">
+                {{ form.as_p }}
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 mt-4 rounded hover:bg-blue-600 transition duration-300 ease-in-out">
                 Submit
             </button>
         </form>
     </div>
-
-
+</div>
 {% endblock %}

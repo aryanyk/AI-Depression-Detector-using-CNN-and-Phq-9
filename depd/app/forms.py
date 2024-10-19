@@ -1,6 +1,6 @@
 
 from django import forms
-
+from .models import Profile
 PHQ_CHOICES = [
     (0, 'Not at all'),
     (1, 'Several days'),
@@ -20,11 +20,18 @@ class PHQ9Form(forms.Form):
     q9 = forms.ChoiceField(choices=PHQ_CHOICES, widget=forms.RadioSelect, label="Thoughts that you would be better off dead?")
 
 
-class ProfileForm(forms.Form):
-    name = forms.CharField(max_length=100, required=True)
-    age = forms.IntegerField(required=True)
-    dob = forms.DateField(required=True)
-    bmi = forms.FloatField(required=True)
-    height = forms.FloatField(required=True)
-    weight = forms.FloatField(required=True)
-    image = forms.ImageField(required=False)
+# forms.py
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = [
+            'first_name', 
+            'last_name', 
+            'image', 
+            'email', 
+            'date_of_birth', 
+            'height', 
+            'weight'
+        ]

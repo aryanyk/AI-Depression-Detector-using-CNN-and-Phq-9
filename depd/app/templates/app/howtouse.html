@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="p-6 border-b">
+                <h1 class="text-2xl font-bold">How to Use</h1>
+                <p class="text-gray-600">Follow these instructions to ensure the best experience and accurate results.</p>
+            </div>
+            <div class="p-6">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- Sun Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v2m4.22-1.22l1.42 1.42M21 12h-2m1.22 4.22l-1.42 1.42M12 21v-2m-4.22 1.22l-1.42-1.42M3 12H5m-1.22-4.22l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z" />
+                            </svg>
+                        </div>
+                        <span>Sit in a well-lit room to ensure clear visibility</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- Camera Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h3l1-2h8l1 2h3a2 2 0 012 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V9a2 2 0 012-2z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 110-6 3 3 0 010 6z" />
+                            </svg>
+                        </div>
+                        <span>Ensure you have a working camera for visual tasks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- Brain Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7c0-1.105-.895-2-2-2H6a2 2 0 00-2 2v10c0 1.105.895 2 2 2h12a2 2 0 002-2V7z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6" />
+                            </svg>
+                        </div>
+                        <span>Provide accurate and honest answers to all questions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- Headphones Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 7v-7M12 14l-9 5V9l9-5 9 5v7l-9 5z" />
+                            </svg>
+                        </div>
+                        <span>Use headphones or ensure a quiet environment for audio tasks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- Clock Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 2a10 10 0 110 20 10 10 0 010-20z" />
+                            </svg>
+                        </div>
+                        <span>Allow sufficient time to complete the session without interruptions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- CheckCircle Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span>Follow all instructions carefully and completely</span>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="mr-4 mt-1">
+                            <!-- Smile Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h.01M10 10h.01M12 14a4 4 0 01-4-4h8a4 4 0 01-4 4z" />
+                            </svg>
+                        </div>
+                        <span>Stay relaxed and maintain a natural expression</span>
+                    </li>
+                </ul>
+                
+                <button class="pt-3">
+                    <a href="{% url 'dashboard' %}" class="block w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Start</a>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+
+{% endblock %}
