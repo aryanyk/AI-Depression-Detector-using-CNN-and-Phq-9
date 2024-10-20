@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load allauth account %}
+
+{% block head_title %}
+    {% trans "Sign In" %}
+{% endblock head_title %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 bg-white p-10 shadow-lg rounded-lg">
+        <div class="text-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                {% trans "Sign In" %}
+            </h1>
+            <p class="mt-2 text-sm text-gray-600">
+                {% blocktranslate %}
+                Don't have an account? 
+                <a href="{{ signup_url }}" class="font-medium text-indigo-600 hover:text-indigo-500">
+                    Sign up
+                </a>
+                {% endblocktranslate %}
+            </p>
+        </div>
+
+        {% if not SOCIALACCOUNT_ONLY %}
+        <form class="mt-8 space-y-6" method="post" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            <div class="space-y-6">
+                {{ form.non_field_errors }}
+                <div>
+                    {{ form.login.label_tag }}
+                    <input type="text" name="login" id="login" class="appearance-none block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your email or username">
+                </div>
+                <div>
+                    {{ form.password.label_tag }}
+                    <input type="password" name="password" id="password" class="appearance-none block w-full px-3 py-3 border border-gray-300 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Your password">
+                </div>
+            </div>
+
+            {{ redirect_field }}
+
+            <div class="flex items-center justify-between">
+                <div class="text-sm">
+                    <a href="{% url 'account_reset_password' %}" class="font-medium text-indigo-600 hover:text-indigo-500">
+                        {% trans "Forgot your password?" %}
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    {% trans "Sign In" %}
+                </button>
+            </div>
+        </form>
+        {% endif %}
+
+        {% if LOGIN_BY_CODE_ENABLED or PASSKEY_LOGIN_ENABLED %}
+        <div class="mt-6">
+            <hr class="my-4">
+            <div class="space-y-4">
+                {% if PASSKEY_LOGIN_ENABLED %}
+                <button type="button" class="w-full flex justify-center py-3 px-4 border border-indigo-600 text-sm font-medium rounded-md text-indigo-600 hover:bg-indigo-50">
+                    {% trans "Sign in with a passkey" %}
+                </button>
+                {% endif %}
+
+                {% if LOGIN_BY_CODE_ENABLED %}
+                <a href="{{ request_login_code_url }}" class="w-full flex justify-center py-3 px-4 border border-indigo-600 text-sm font-medium rounded-md text-indigo-600 hover:bg-indigo-50">
+                    {% trans "Mail me a sign-in code" %}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if SOCIALACCOUNT_ENABLED %}
+        <div class="mt-6">
+            <hr class="my-4">
+            {% include "socialaccount/snippets/login.html" %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_body %}
+    {{ block.super }}
+    {% if PASSKEY_LOGIN_ENABLED %}
+        {% include "mfa/webauthn/snippets/login_script.html" with button_id="passkey_login" %}
+    {% endif %}
+{% endblock %}

@@ -35,3 +35,14 @@ class ProfileForm(forms.ModelForm):
             'height', 
             'weight'
         ]
+        
+
+
+class ConsultationBookingForm(forms.Form):
+    first_name = forms.CharField(max_length=100, required=True)
+    last_name = forms.CharField(max_length=100, required=True)
+    email = forms.EmailField(required=True)
+    phone = forms.CharField(max_length=15, required=True)
+    date = forms.DateField(widget=forms.SelectDateWidget(), required=True)
+    time = forms.TimeField(widget=forms.TimeInput(attrs={'type': 'time'}), required=True)
+    message = forms.CharField(widget=forms.Textarea, required=False)

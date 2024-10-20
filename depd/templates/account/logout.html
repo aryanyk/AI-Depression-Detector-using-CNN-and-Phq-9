@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load allauth i18n %}
+
+{% block head_title %}
+    {% trans "Sign Out" %}
+{% endblock head_title %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 bg-white p-10 shadow-lg rounded-lg">
+        <div class="text-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                {% trans "Sign Out" %}
+            </h1>
+            <p class="mt-2 text-sm text-gray-600">
+                {% trans 'Are you sure you want to sign out?' %}
+            </p>
+        </div>
+
+        <form method="post" action="{% url 'account_logout' %}" class="mt-8 space-y-6">
+            {% csrf_token %}
+            {{ redirect_field }}
+
+            <div class="flex items-center justify-between">
+                <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                    {% trans "Sign Out" %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

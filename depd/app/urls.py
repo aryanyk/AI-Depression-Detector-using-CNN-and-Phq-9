@@ -17,6 +17,7 @@ urlpatterns = [
     path("complete-profile/", views.complete_profile, name="complete-profile"),
     path("how-to-use/", views.howtouse, name="how-to-use"),
     path('video_feed/', views.video_feed, name='video_feed'),
+    path('book-consultation/', views.book_consultation, name='book_consultation'),
     
     
 ]

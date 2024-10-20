@@ -57,14 +57,30 @@
                 </div>
                 <div class="p-4 space-y-4">
                     <!-- Example of previous results -->
+                     {% if results %}
+                    {% for result in results %}
                     <div class="flex items-center justify-between p-4 bg-white rounded-lg shadow">
                         <div>
-                            <p class="font-semibold">2024-10-01</p>
-                            <p>Score: 85</p>
+                            <p class="font-semibold">{{ result.date }}</p>
+                            <p>Score: {{ result.total_score }}</p>
                         </div>
-                        <span class="bg-red-500 text-white px-3 py-1 rounded">Depressed</span> <!-- Change based on condition -->
+                        {% if result.total_score < 9 %}
+                        <span class="bg-green-500 text-white px-3 py-1 font-semibold rounded">{{ result.Status }}</span> <!-- Change based on condition -->
+                        {% elif result.total_score < 15 %}
+                        <span class="bg-yellow-500 text-white px-3 py-1 font-semibold rounded">{{ result.Status }}</span> <!-- Change based on condition -->
+                        {% else %}
+                        <span class="bg-red-500 text-white px-3 py-1 font-semibold rounded">{{ result.Status }}</span> <!-- Change based on condition -->
+                        {% endif %}
+                    
                     </div>
-    
+                    {% endfor %}
+                    {% else %}
+                    <div class="flex items-center justify-between p-4 bg-white rounded-lg shadow">
+                        <div>
+                            <p class="font-semibold">No Results Found</p>
+                        </div>    
+                    </div>
+                    {% endif %}
                     <!-- Repeat the above block for each result -->
                 </div>
             </div>
