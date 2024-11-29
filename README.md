@@ -44,5 +44,24 @@ Run the wsgi server to see the website
   ```bash
   py manage.py runserver
 
+### FLow chart and CNN architecture:
+![flowchart](https://github.com/user-attachments/assets/eff7e728-e607-4a04-988c-ee25ed835d7b)
+![CNN](https://github.com/user-attachments/assets/82b5dabb-2ba1-4388-b81f-8c913c31b5c2)
 
+### Sample Dataset Images:
+![dataset-cover](https://github.com/user-attachments/assets/f5e3e949-e0ae-4053-b630-19275e56ddab)
+
+
+### Screenshots of the web app
+
+![home page](https://github.com/user-attachments/assets/5fa9bad4-817a-482d-bfe9-fe4158f86c4d)
+
+
+![gettinf started](https://github.com/user-attachments/assets/38f998f9-13c1-4038-8292-1e5f93b54b29)
+![dashboard](https://github.com/user-attachments/assets/cada77aa-6c46-4686-a6bd-ae724db4c52e)
+![input](https://github.com/user-attachments/assets/f96d48bb-dba6-41bd-87a8-bdfaf1f27040)
+
+![result](https://github.com/user-attachments/assets/5b4a6c26-9d60-40ff-9f5b-5e129715d7fa)
+
+![consult](https://github.com/user-attachments/assets/d6b6042b-a874-45bb-9293-3cda14251fb3)
 
